@@ -1,8 +1,8 @@
 ---
 - name: Configure VLANS on network devices using NetBox VLAN data
   connection: network_cli
-  hosts: sites_cisco-live
-  gather_facts: no
+  hosts: sites_cisco-live-emea
+  gather_facts: false
   vars:
     netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
     netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
